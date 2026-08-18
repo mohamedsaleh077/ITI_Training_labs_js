@@ -44,6 +44,8 @@ var randNum = Math.round(Math.random() * 10);
 var user_guess = prompt("guess number between 1 and 10");
 if(user_guess == randNum){
     alert("WINNER")
+    document.writeln("<hr>WINNER<br>")
 }else{
     alert("LOSER")
+    document.writeln("<hr>LOSER<br>")
 }
