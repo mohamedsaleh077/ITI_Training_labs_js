@@ -14,14 +14,15 @@ function startClock(){
 
 // Task 2
 function openLinkedin(){
-    window.open("https://linkedin.com", "", "width=500, highet=700");
+    window.open("https://linkedin.com", "", "width=500, highet=700").focus();
 }
 
 // Task 3
 var win;
 function openAd(){
     setTimeout(function(){
-        win = window.open("", "", "width=640, highet=480")
+        win = window.open("", "", "width=640, highet=480");
+        win.focus();
         win.document.writeln("<button onclick='window.close()'>Close!</button><br>");
         win.document.writeln("Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis repellat, ipsum possimus facere architecto voluptatum! Id, minima modi libero quis incidunt odit repellendus voluptate doloribus laboriosam hic deserunt aperiam?");
     }, 3000);
