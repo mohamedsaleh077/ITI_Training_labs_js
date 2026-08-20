@@ -9,7 +9,15 @@
             padding: 15px;
             font-size: large;
         }
-        
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            width: 50%;
+        }
+        td {
+            padding: 10px;
+            border: 2px solid black;
+        }
     </style>
 </head>
 <body>
@@ -24,15 +32,16 @@
     <br><hr><hr><br>
     <h2>Simple CRUD Table</h2>
     <input type="text" id="name" placeholder="Name">
-    <input type="text" id="age" placeholder="Age">
+    <input type="number" id="age" placeholder="Age">
     <input type="button" id="add" value="Add">
 
-    <table>
-        <th>
+    <table id="crud">
+        <tr>
             <td>Name</td>
             <td>Age</td>
             <td>Actions</td>
-        </th>
+        </tr>
+        
     </table>
     <script src="script.js"></script>
 </body>
