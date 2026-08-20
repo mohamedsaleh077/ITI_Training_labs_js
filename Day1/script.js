@@ -5,8 +5,7 @@ while(true){
     firstName = prompt("Your First Name: ");
     lastName = prompt("Your Last Name: ");
     
-    confirm = prompt("To confirm " + firstName + " " + lastName + " type y, to retry, type anything else!");
-    if(confirm == "y"){
+    if(confirm("confirm " + firstName + " " + lastName + "?")){
         break;
     }
 }

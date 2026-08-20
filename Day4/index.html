@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input{
+            padding: 15px;
+            font-size: large;
+        }
+        
+    </style>
 </head>
 <body>
-    
+    <button id="next">Next</button>
+    <button id="previous">Previous</button>
+    <button id="slide">Slide Show</button>
+    <button id="stop">Stop</button>
+    <br>
+
+    <img id="image" src="./imgs/1.jpg" alt="slide show" width="500">
+
+    <br><hr><hr><br>
+    <h2>Simple CRUD Table</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="age" placeholder="Age">
+    <input type="button" id="add" value="Add">
+
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Actions</td>
+        </th>
+    </table>
     <script src="script.js"></script>
 </body>
 </html>
