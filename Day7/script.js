@@ -75,11 +75,9 @@ class UserAccount{
 }
 
 class AdminAccount extends UserAccount{
-    #password
     #role
     constructor(username, password, role){
-        this.#password = password
-        this.username = username
+        super(username,password)
         this.#role = role
     }
 
@@ -89,17 +87,19 @@ class AdminAccount extends UserAccount{
 }
 
 normalUser = new UserAccount("username", "password")
+console.log(normalUser.username)
 
 console.log(normalUser.verifyPassword("password"))
 console.log(normalUser.verifyPassword("passWord"))
 
-console.log(normalUser.grtSecurityNotice)
+console.log(UserAccount.grtSecurityNotice())
 
-console.log(normalUser.username)
-
-admin = new AdminAccount("admin", "admin", "admin")
-console.log(admin.verifyPassword("password"))
-console.log(admin.verifyPassword("admin"))
-console.log(admin.grtSecurityNotice)
+admin = new AdminAccount("admin-user", "admin_password", "admin")
 console.log(admin.username)
-console.log(admin.getAdminRole)
+
+console.log(admin.verifyPassword("admin_password"))
+console.log(admin.verifyPassword("password"))
+
+console.log(AdminAccount.grtSecurityNotice())
+
+console.log(admin.getAdminRole())
