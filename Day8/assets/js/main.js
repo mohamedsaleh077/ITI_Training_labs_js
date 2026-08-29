@@ -6,7 +6,7 @@ const usersDiv = document.getElementById("users")
 loadBtn.addEventListener("click", async () => {
     const result = await getUsers()
     if(!result){
-        usersDiv.innerText = "Something went wrong!"`<li>Name: </li><li>Email: </li><li>City: </li><br>`
+        usersDiv.innerText = "Something went wrong!"
     }else{
         let usersArray = result.users
         usersDiv.innerHTML += usersArray.map((e) => {
