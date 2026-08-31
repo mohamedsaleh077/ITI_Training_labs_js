@@ -1,0 +1,336 @@
+/* base */
+:root {
+    --primary-color: #FFB400;
+    --background: #F0F0F6;
+    --hover: #e6a200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    padding: 15px;
+    gap: 30px;
+    position: absolute;
+}
+
+/* left */
+aside {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: max-content;
+}
+
+/* Profile Figure & Image */
+aside figure {
+    text-align: center;
+}
+
+aside figure img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+aside figcaption h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+aside figcaption p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media svg {
+    fill: black;
+    background-color: var(--primary-color);
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.social-media svg:hover {
+    fill: white;
+    background-color: var(--hover);
+}
+
+aside h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+aside section:nth-of-type(1) ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+aside section:nth-of-type(1) li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    gap: 3px;
+}
+
+.info-title {
+    background-color: var(--primary-color);
+    padding: 2px 6px;
+    font-weight: 500;
+}
+
+.info {
+    font-weight: 500;
+}
+
+aside section ul {
+    list-style: none;
+}
+
+aside section ul li {
+    margin-bottom: 12px;
+}
+
+aside section ul li div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+progress {
+    width: 100%;
+    height: 5px;
+    appearance: none;
+    border-radius: 100px;
+    height: 10px;
+    display: block;
+    color: var(--primary-color);
+}
+
+/*
+Source - https://stackoverflow.com/a/18368275
+Posted by nullability, modified by community. See post 'Timeline' for change history
+Retrieved 2026-08-31, License - CC BY-SA 4.0
+*/
+progress::-moz-progress-bar { background: var(--primary-color); }
+progress::-webkit-progress-value { background: var(--primary-color); }
+
+aside section:nth-of-type(4) ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+aside section:nth-of-type(4) li {
+    font-size: 14px;
+    color: gray;
+    position: relative;
+    padding-left: 20px;
+}
+
+aside section:nth-of-type(4) li::before {
+    content: "❐";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+aside button {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+aside button:hover {
+    background-color: var(--hover);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+
+header div {
+    max-width: 500px;
+    z-index: 2;
+    padding: 50px;
+}
+
+header h1 {
+    font-size: 44px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 15px;
+}
+
+header h1 span {
+    color: var(--primary-color);
+}
+
+header p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 25px;
+}
+
+header button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 14px 30px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+header button:hover {
+    background-color: var(--hover);
+}
+
+header img {
+    height: 320px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+main section {
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2b2b2b;
+}
+
+main section p {
+    max-width: 440px;
+    margin: 0 auto 35px auto;
+    font-size: 14px;
+    color: gray;
+}
+
+main section div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+article svg {
+    width: 100px;
+    height: 100px;
+    fill: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+article h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 13px;
+    color: gray;
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 13px;
+    color: gray;
+}
+
+nav {
+    width: 70px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    height: max-content;
+}
+
+nav a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a svg {
+    fill: gray;
+    padding: 5px;
+}
+
+nav a:first-of-type,
+nav a:hover {
+    background-color: var(--primary-color);
+}
+
+nav a:first-of-type svg,
+nav a:hover svg {
+    fill: black ;
+}
