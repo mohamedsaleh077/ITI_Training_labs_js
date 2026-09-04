@@ -1,7 +1,7 @@
 /* base */
 :root {
     --primary-color: #FFB400;
-    --background: #F0F0F6;
+    --background: #ececec;
     --hover: #e6a200;
 }
 
@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: var(--background);
+    background-color: #ececec;
     display: flex;
     padding: 15px;
     gap: 30px;
@@ -67,6 +67,7 @@ aside figcaption p {
     padding: 4px;
     cursor: pointer;
     border-radius: 50%;
+    transition: background-color 0.2s ease, fill 0.2s ease;
 }
 
 .social-media svg:hover {
@@ -134,8 +135,13 @@ Source - https://stackoverflow.com/a/18368275
 Posted by nullability, modified by community. See post 'Timeline' for change history
 Retrieved 2026-08-31, License - CC BY-SA 4.0
 */
-progress::-moz-progress-bar { background: var(--primary-color); }
-progress::-webkit-progress-value { background: var(--primary-color); }
+progress::-moz-progress-bar {
+    background: var(--primary-color);
+}
+
+progress::-webkit-progress-value {
+    background: var(--primary-color);
+}
 
 aside section:nth-of-type(4) ul {
     display: flex;
@@ -166,6 +172,7 @@ aside button {
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 aside button:hover {
@@ -219,6 +226,7 @@ header button {
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.2s ease
 }
 
 header button:hover {
@@ -250,10 +258,11 @@ main section p {
     color: gray;
 }
 
-main section div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 article {
@@ -263,6 +272,12 @@ article {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 300px;
+    transition: background-color 0.2s ease;
+}
+
+article:hover {
+    background-color: #e9e9f2;
 }
 
 article svg {
@@ -282,6 +297,146 @@ article h3 {
 article p {
     font-size: 13px;
     color: gray;
+}
+
+/* portfolio */
+.portfolio-filter {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.portfolio-filter a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.portfolio-filter a.active,
+.portfolio-filter a:hover {
+    color: var(--primary-color);
+}
+
+.portfolio-section img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* blog */
+.blog-card {
+    padding: 0;
+    text-align: left;
+    align-items: stretch;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-body {
+    padding: 20px;
+}
+
+.blog-card h3 {
+    font-size: 16px;
+}
+
+.blog-card p {
+    max-width: none;
+    margin: 0 0 15px 0;
+}
+
+.blog-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* contact */
+.contact-section {
+    text-align: left;
+}
+
+.contact-section h2 {
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    background-color: #f7f7fb;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    background-color: #e9e9f2;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form button {
+    width: max-content;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 25px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--hover);
+}
+
+.contact-card {
+    background-color: #f7f7fb;
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-card svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-card ul {
+    list-style: none;
+}
+
+.contact-card li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 12px;
+}
+
+.contact-card li:last-child {
+    margin-bottom: 0;
 }
 
 .edu-list {
@@ -314,7 +469,7 @@ article p {
     padding-right: 20px;
 }
 
-.edu-item *{
+.edu-item * {
     display: inline-block;
 }
 
@@ -355,8 +510,8 @@ article p {
     font-size: 15px;
     color: gray;
     line-height: 1.6;
-    margin: 0; 
-    max-width: none; 
+    margin: 0;
+    max-width: none;
     text-align: left;
 }
 
@@ -392,6 +547,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s ease;
 }
 
 nav a svg {
@@ -406,5 +562,197 @@ nav a:hover {
 
 nav a:first-of-type svg,
 nav a:hover svg {
-    fill: black ;
+    fill: black;
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+    body {
+        position: relative;
+        flex-direction: column;
+        padding: 8px;
+        gap: 12px;
+    }
+
+    aside {
+        width: 100%;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    aside figcaption h2 {
+        font-size: 16px;
+    }
+
+    aside figcaption p {
+        font-size: 13px;
+    }
+
+    .social-media svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    aside h3 {
+        font-size: 15px;
+    }
+
+    aside section:nth-of-type(1) li {
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .info-title {
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    aside section ul li div {
+        font-size: 13px;
+    }
+
+    aside section:nth-of-type(4) li {
+        font-size: 13px;
+    }
+
+    header div {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    header p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    header button {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+
+    header img {
+        display: none;
+    }
+
+    main section h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    main section p {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        padding: 25px 15px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    article svg {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    article h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    article p {
+        font-size: 12px;
+    }
+
+    .portfolio-filter {
+        gap: 10px 15px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-filter a {
+        font-size: 13px;
+    }
+
+    .portfolio-section img,
+    .blog-card img {
+        height: 160px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .edu-list {
+        padding: 20px 15px;
+    }
+
+    .edu-item {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .edu-left {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .edu-right {
+        width: 100%;
+    }
+
+    .edu-left h3,
+    .edu-right h3 {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    .edu-role {
+        font-size: 13px;
+    }
+
+    .edu-date {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .edu-right p {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 15px;
+        position: relative;
+    }
+
+    nav a {
+        width: 36px;
+        height: 36px;
+    }
+
+    nav a svg {
+        padding: 4px;
+    }
 }
