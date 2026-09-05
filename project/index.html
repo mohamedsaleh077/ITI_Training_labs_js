@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="./signin.html" class="auth_link">Sign In</a>
+        <a href="./signup.html" class="auth_link">Sign Up</a>
+        <a href="#" id="logout">Log out</a>
+        <span id="auth_user"></span>
+        <button id="color_toggle">Light Mode</button>
+    </nav>
+    <header class="hero">
+  <span>194 products across 30+ categories</span>
+  <h1>Everything you need,<br><span>found in seconds.</span></h1>
+  <p>Browse our full catalogue — beauty, electronics, apparel, home goods, and more. Search anything to find it instantly.</p>
+  <div>
+    <input type="text" id="search" placeholder="Search"><button onclick="search_product()">search</button>
+  </div>
+</header>
+ 
+<main class="products-section">
+  <div class="section-header">
+    <h2>All Products</h2>
+    <span id="result-count"></span>
+  </div>
+  <div id="product-grid">
+    <div id="loading"><div></div>Loading products…</div>
+  </div>
+</main>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
